@@ -1,14 +1,15 @@
 import Image from "next/image";
 import React from "react";
-import Banner from "./Banner";
+import Banner from "./banner";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
-export default function Navbar({ selected }) {
+export default function NavbarMain({ selected }) {
   const classSelected = "bg-slate-100 font-semibold";
   return (
     <>
       <Banner />
-      <header className="sticky top-0 bg-white shadow">
+      <header className="sticky top-0 z-50 bg-white shadow">
         <div className="container flex items-center justify-between bg-white py-4">
           <Link href={"/"}>
             <div className="flex items-center gap-3">
@@ -39,13 +40,11 @@ export default function Navbar({ selected }) {
             </Link>
           </ul>
           <div className="flex gap-4">
-            <Link href={"/auth/sign-in"}>
-              <button className="rounded-md px-8 py-3 text-sm font-semibold">Masuk</button>
-            </Link>
             <Link href={"/auth/sign-up"}>
-              <button className="rounded-lg border-2 px-8 py-3 text-sm font-semibold">
-                Daftar
-              </button>
+              <Button variant={"ghost"}>Daftar</Button>
+            </Link>
+            <Link href={"/auth/sign-in"}>
+              <Button>Masuk</Button>
             </Link>
           </div>
         </div>

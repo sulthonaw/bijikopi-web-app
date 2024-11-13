@@ -1,12 +1,14 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Banner() {
-  const ref = useRef();
+  const [isVisible, setIsVisible] = useState(true);
+
+  if (!isVisible) return null; // Tidak menampilkan komponen jika tidak terlihat
 
   return (
-    <div className="bg-black text-white" ref={ref}>
+    <div className="bg-black text-white">
       <div className="container flex items-center justify-between py-3 text-sm">
         <div className="flex items-center gap-2">
           <span className="relative flex h-3 w-3">
@@ -17,7 +19,7 @@ export default function Banner() {
         </div>
         <button
           className="active:scale-75"
-          onClick={() => ref.current.remove()}
+          onClick={() => setIsVisible(false)} // Mengatur state isVisible menjadi false
         >
           <XMarkIcon width={20} height={20} />
         </button>
