@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Banner from "./banner";
+// import Banner from "./banner";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
@@ -33,7 +33,7 @@ export default function NavbarMain({ selected }) {
   return (
     <>
       <header className="fixed top-0 z-50 m-4 w-full shadow">
-        <Banner />
+        {/* <Banner /> */}
         <div className="container flex items-center justify-between py-4">
           <Link href={"/"}>
             <div className="flex items-center gap-3">

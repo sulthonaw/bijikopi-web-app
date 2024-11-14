@@ -1,5 +1,5 @@
 "use client";
-import NavbarMain from "@/components/NavbarMain";
+import NavbarMain from "@/components/navbarMain";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {

@@ -1,5 +1,4 @@
 import CardProduk from "@/components/cardProduk";
-import Footer from "@/components/footer";
 import NavbarMain from "@/components/navbarMain";
 import { Button } from "@/components/ui/button";
 import { ArrowDownIcon, StarIcon } from "@heroicons/react/24/solid";
