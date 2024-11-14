@@ -20,7 +20,7 @@ export default function AsideNavbar({ active }) {
         </div>
         <ul className="flex w-full flex-col gap-4">
           <li>
-            <Link href={"/manage/dashboard"}>
+            <Link href={"/admin/manage/dashboard"}>
               <div
                 className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "dashboard")}`}
               >
@@ -30,7 +30,7 @@ export default function AsideNavbar({ active }) {
             </Link>
           </li>
           <li>
-            <Link href={"/manage/produk"}>
+            <Link href={"/admin/manage/produk"}>
               <div
                 className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "produk")}`}
               >
@@ -40,7 +40,7 @@ export default function AsideNavbar({ active }) {
             </Link>
           </li>
           <li>
-            <Link href={"/manage/profil"}>
+            <Link href={"/admin/manage/profil"}>
               <div
                 className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "profil")}`}
               >
