@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Logo({ className }) {
+export default function Logo({ className = "w-36" }) {
   return (
     <svg
       className={className}
