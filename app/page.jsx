@@ -1,8 +1,7 @@
 "use client";
-import CardProduk from "@/components/cardProduk";
 import NavbarMain from "@/components/navbarMain";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -49,9 +48,8 @@ function OurProducts() {
       <Carousel className="w-full" plugins={[plugin.current]} setApi={setApi}>
         <div className="mb-10 flex items-end justify-between">
           <div>
-            <p className="mb-4">Lihat semua</p>
-            <h1 className="mb-4 text-7xl font-semibold">Produk</h1>
-            <p>Yang kami miliki</p>
+            <p className="mb-2 font-semibold text-slate-500">See our</p>
+            <h1 className="mb-4 text-7xl font-semibold">Products</h1>
           </div>
           <div>
             <div className="flex justify-end gap-2">
@@ -124,8 +122,8 @@ function CTA() {
     <section className="container py-16">
       <div className="flex items-end justify-between rounded-2xl bg-gradient-to-tr from-black from-80% to-slate-700 px-10 py-16 text-white">
         <div className="max-w-3xl">
-          <p className="mb-5 text-sm font-bold text-slate-300">COBA SEKARANG</p>
-          <h1 className="mb-5 text-6xl">Siap untuk berbisnis dengan kami?</h1>
+          <p className="mb-5 text-sm font-bold text-slate-300">TRY NOW</p>
+          <h1 className="mb-5 text-6xl">Ready to do business with us?</h1>
           <p className="text-slate-200">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi cumque voluptatibus
             ducimus ab inventore laboriosam, debitis aliquam. Veritatis dolorum fuga ullam est nam a
@@ -174,16 +172,18 @@ export default function Home() {
         </div>
       </section>
       <section className="container py-16" id="about-us">
-        <p className="mb-4 text-center">Lebih kenal dengan kita</p>
-        <h1 className="mb-20 text-center text-7xl font-semibold">Tentang Kita</h1>
+        <p className="mb-4 text-center">Get to Know Us Better</p>
+        <h1 className="mb-20 text-center text-7xl font-semibold">About Us</h1>
         <div className="flex items-center justify-between gap-x-20">
           <div className="flex-1">
-            <h1 className="mb-5 font-semibold">Berdiri sejak</h1>
+            <h1 className="mb-5 font-semibold">Established in</h1>
             <p className="mb-5 text-9xl font-semibold">2014</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae assumenda incidunt
-              dignissimos sint cum ex veritatis obcaecati quos quae nihil, ullam vel voluptatibus
-              aliquam quibusdam tempora, non provident id. Magnam!
+              <strong>BIJIKOPI</strong> was born as an expression of our love for Indonesian coffee.
+              Inspired by the rich flavors from Sabang to Merauke, we are committed to delivering
+              carefully crafted, premium coffee with expertise and dedication. By using the finest
+              coffee beans harvested by local farmers, we believe that every sip of coffee tells a
+              story of the land, culture, and spirit of the farmers.
             </p>
           </div>
           <div className="flex-1">
@@ -201,7 +201,7 @@ export default function Home() {
         {Array.from({ length: 3 }).map((_, index) => (
           <Card className={"p-4 shadow-none"} key={index}>
             <GlobeAltIcon width={50} height={50} className="mb-5" />
-            <h1 className="mb-2 text-2xl font-semibold">Terstandarisasi</h1>
+            <h1 className="mb-2 text-2xl font-semibold">Standardized</h1>
             <p className="text-justify text-slate-500">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa suscipit recusandae
               itaque velit?
@@ -211,9 +211,10 @@ export default function Home() {
       </section>
       <section className="container py-16">
         <h1 className="mb-5 text-center text-6xl font-bold">Partner</h1>
-        <p className="mb-16 text-center text-slate-500">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus culpa eaque dolores
-          tempore provident?
+        <p className="mx-auto mb-16 max-w-5xl text-center text-slate-500">
+          Our partners who have collaborated with us have experienced the benefits of our support in
+          achieving their business success and realizing every strategic plan they have carefully
+          crafted.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-5">
           {Array.from({ length: 14 }).map((_, index) => (
@@ -227,7 +228,7 @@ export default function Home() {
         <OurProducts />
         <div className="flex justify-end">
           <Button variant={"ghost"} className={"font-semibold"}>
-            Lihat semua
+            See All
             <ArrowLongRightIcon width={24} height={24} />
           </Button>
         </div>

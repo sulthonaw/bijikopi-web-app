@@ -1,48 +1,65 @@
-import { ArchiveBoxArrowDownIcon, Squares2X2Icon, UserCircleIcon } from "@heroicons/react/24/solid";
+import {
+  ArchiveBoxArrowDownIcon,
+  NewspaperIcon,
+  Squares2X2Icon,
+  UserCircleIcon,
+} from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Logo from "./logo";
 
 export default function AsideNavbar({ active }) {
   const activeNavItem = (active, type) => {
     if (active == type) {
-      return "bg-primary text-white";
+      return "bg-white text-black";
     }
-    return "hover:bg-primary/10 text-slate-700";
+    return "hover:bg-white/20 text-slate-300";
   };
 
   return (
-    <aside className="fixed inset-y-0 left-0 z-10 hidden w-64 flex-col border-r bg-background sm:flex">
-      <nav className="px-4 py-5">
-        <div className="mb-10 flex items-center justify-center gap-5 px-2">
-          <Image src={"/logo.png"} width={40} height={40} alt="logo" />
-          <h1 className="text-3xl font-semibold text-primary">Exporify</h1>
-        </div>
-        <ul className="flex w-full flex-col gap-4">
+    <aside className="fixed inset-y-0 left-0 z-10 hidden w-64 flex-col border-r bg-background bg-slate-950 sm:flex">
+      <nav className="px-4 py-7">
+        <Logo className="mx-auto mb-10 w-36 text-white" />
+        <h2 className="mb-3 text-sm font-bold text-white">Dashboard</h2>
+        <ul className="mb-6 flex w-full flex-col gap-4">
           <li>
-            <Link href={"/admin/manage/dashboard"}>
+            <Link href={"/admin/manage/overview"}>
               <div
-                className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "dashboard")}`}
+                className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "overview")}`}
               >
                 <Squares2X2Icon width={20} height={20} />
-                <p>Dashboard</p>
+                <p>Overview</p>
               </div>
             </Link>
           </li>
+        </ul>
+        <h2 className="mb-3 text-sm font-bold text-white">Manage</h2>
+        <ul className="flex w-full flex-col gap-4">
           <li>
-            <Link href={"/admin/manage/produk"}>
+            <Link href={"/admin/manage/products"}>
               <div
-                className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "produk")}`}
+                className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "products")}`}
               >
                 <ArchiveBoxArrowDownIcon width={20} height={20} />
-                <p>Produk</p>
+                <p>Products</p>
               </div>
             </Link>
           </li>
           <li>
-            <Link href={"/admin/manage/profil"}>
+            <Link href={"/admin/manage/news"}>
               <div
-                className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "profil")}`}
+                className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "news")}`}
+              >
+                <NewspaperIcon width={20} height={20} />
+                <p>News</p>
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link href={"/admin/manage/profile"}>
+              <div
+                className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "profile")}`}
               >
                 <UserCircleIcon width={20} height={20} />
                 <p>Profil</p>

@@ -15,7 +15,7 @@ import {
 
 export default function page() {
   return (
-    <LayoutManage activeNavItem={"produk"}>
+    <LayoutManage activeNavItem={"products"}>
       <div className="mb-4 flex justify-end">
         <Button>
           <PlusIcon width={16} height={16} />

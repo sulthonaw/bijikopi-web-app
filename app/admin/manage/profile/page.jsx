@@ -11,7 +11,7 @@ import React from "react";
 
 export default function Page() {
   return (
-    <LayoutManage activeNavItem={"profil"}>
+    <LayoutManage activeNavItem={"profile"}>
       <Card className={"p-4 shadow-sm"}>
         <div className="flex w-full items-center justify-between">
           <h1 className="mb-5 text-xl font-semibold">Informasi Profil</h1>

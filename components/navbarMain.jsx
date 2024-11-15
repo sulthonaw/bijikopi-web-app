@@ -1,10 +1,6 @@
-import Image from "next/image";
-import React from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Logo from "./logo";
-import { StarIcon } from "@heroicons/react/24/solid";
-import { Instagram } from "lucide-react";
 
 export default function NavbarMain({ selected }) {
   const classSelected = "bg-slate-100 font-semibold";
@@ -15,6 +11,14 @@ export default function NavbarMain({ selected }) {
       name: "Home",
     },
     {
+      url: "/#about-us",
+      name: "About Us",
+    },
+    {
+      url: "/#news",
+      name: "News",
+    },
+    {
       url: "/#catalog",
       name: "Catalog",
     },
@@ -22,10 +26,7 @@ export default function NavbarMain({ selected }) {
       url: "/#faqs",
       name: "FAQs",
     },
-    {
-      url: "/#about-us",
-      name: "About Us",
-    },
+
     {
       url: "/contact-us",
       name: "Contact Us",
@@ -55,12 +56,12 @@ export default function NavbarMain({ selected }) {
                 </Link>
               ))}
             </ul>
-            <div className="flex gap-4">
+            <div className="flex items-center gap-4">
               <Link href={"/auth/sign-up"}>
-                <Button variant={"ghost"}>Daftar</Button>
+                <Button variant={"ghost"}>Register</Button>
               </Link>
               <Link href={"/auth/sign-in"}>
-                <Button>Masuk</Button>
+                <Button>Login</Button>
               </Link>
             </div>
           </div>
