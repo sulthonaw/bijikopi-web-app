@@ -45,7 +45,7 @@ function OurProducts() {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   return (
-    <div className="mb-3">
+    <div className="mb-3" id="catalog">
       <Carousel className="w-full" plugins={[plugin.current]} setApi={setApi}>
         <div className="mb-10 flex items-end justify-between">
           <div>
@@ -97,7 +97,7 @@ function OurProducts() {
 
 function FAQs() {
   return (
-    <section className="container py-16">
+    <section id="faqs" className="container py-16">
       <p className="mb-2 text-center">Ada pertanyaan?</p>
       <h1 className="mb-5 text-center text-7xl font-bold">FAQs</h1>
       <p className="mb-16 text-center">- Frequently Ask Questions -</p>
@@ -173,7 +173,7 @@ export default function Home() {
           <div className="absolute bottom-0 top-0 w-full bg-gradient-to-t from-black" />
         </div>
       </section>
-      <section className="container py-16">
+      <section className="container py-16" id="about-us">
         <p className="mb-4 text-center">Lebih kenal dengan kita</p>
         <h1 className="mb-20 text-center text-7xl font-semibold">Tentang Kita</h1>
         <div className="flex items-center justify-between gap-x-20">

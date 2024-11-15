@@ -15,15 +15,15 @@ export default function NavbarMain({ selected }) {
       name: "Home",
     },
     {
-      url: "/catalog",
+      url: "/#catalog",
       name: "Catalog",
     },
     {
-      url: "/faqs",
+      url: "/#faqs",
       name: "FAQs",
     },
     {
-      url: "/about-us",
+      url: "/#about-us",
       name: "About Us",
     },
     {
