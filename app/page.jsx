@@ -1,6 +1,5 @@
 "use client";
 import CardProduk from "@/components/cardProduk";
-import Footer from "@/components/footer";
 import NavbarMain from "@/components/navbarMain";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -23,6 +22,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Footer from "@/components/footer";
 
 function OurProducts() {
   const [api, setApi] = useState();
