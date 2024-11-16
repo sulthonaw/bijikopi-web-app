@@ -69,7 +69,9 @@ export default function Client() {
             <Button className="w-full">Sign In</Button>
             <div className="my-5 flex items-center">
               <hr className="w-full" />
-              <p className="w-full text-center text-sm text-slate-500">Don't have an account?</p>
+              <p className="w-full text-center text-sm text-slate-500">
+                Don`&#39;`t have an account?
+              </p>
               <hr className="w-full" />
             </div>
             <Button className="flex w-full items-center justify-center gap-2" variant="secondary">
