@@ -43,9 +43,9 @@ export default function Client() {
       <section className="container flex min-h-[100vh] items-center justify-center">
         <Card className="w-full max-w-xl rounded-xl border-2 border-slate-100 px-10 py-10 shadow-sm">
           <Logo className="mx-auto mb-5 w-36" />
-          <h1 className="mb-3 text-center text-2xl font-semibold text-primary">Selamat Datang</h1>
+          <h1 className="mb-3 text-center text-2xl font-semibold text-primary">Welcome</h1>
           <p className="mb-10 text-center text-slate-500">
-            Masuk untuk akses penuh fitur yang tersedia.
+            Sign in for full access to available features.
           </p>
           <Form {...form}>
             <FormField
@@ -57,9 +57,6 @@ export default function Client() {
                     <FormControl>
                       <Input type="text" placeholder="@example.com" {...field} />
                     </FormControl>
-                    <FormDescription>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, non!
-                    </FormDescription>
                     <FormMessage />
                   </div>
                 </FormItem>
@@ -69,14 +66,14 @@ export default function Client() {
               <Label htmlFor="password">Password</Label>
               <Input id="password" type="password" placeholder="**********" />
             </div>
-            <Button className="w-full">Masuk</Button>
+            <Button className="w-full">Sign In</Button>
             <div className="my-5 flex items-center">
               <hr className="w-full" />
-              <p className="w-full text-center text-sm text-slate-500">Tidak punya akun?</p>
+              <p className="w-full text-center text-sm text-slate-500">Don't have an account?</p>
               <hr className="w-full" />
             </div>
             <Button className="flex w-full items-center justify-center gap-2" variant="secondary">
-              <p className="text-sm font-semibold">Buat akun baru</p>
+              <p className="text-sm font-semibold">Create a new account</p>
               <ArrowLongRightIcon width={24} height={24} />
             </Button>
           </Form>

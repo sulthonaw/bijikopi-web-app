@@ -45,7 +45,11 @@ function OurProducts() {
 
   return (
     <div className="mb-3" id="catalog">
-      <Carousel className="w-full" plugins={[plugin.current]} setApi={setApi}>
+      <Carousel
+        className="w-full"
+        // plugins={[plugin.current]}
+        setApi={setApi}
+      >
         <div className="mb-10 flex items-end justify-between">
           <div>
             <p className="mb-2 font-semibold text-slate-500">See our</p>
