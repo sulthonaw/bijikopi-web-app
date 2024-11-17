@@ -23,7 +23,7 @@ export default function page() {
           Tambah Produk
         </Button>
       </div>
-      <Card className="h-[120vh] bg-white p-4 shadow-sm">
+      <Card className="bg-white p-4 shadow-sm">
         <h1 className="mb-2 text-lg font-semibold">Manage Produk</h1>
         <p className="mb-5 text-sm text-slate-500">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius totam dolorem quam ea nam

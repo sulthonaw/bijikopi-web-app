@@ -32,6 +32,7 @@ import {
 } from "@/components/ui/table";
 import { useState } from "react";
 import products from "@/seeds/products";
+import Image from "next/image";
 
 const data = products.products;
 
@@ -58,9 +59,19 @@ export const columns = [
     enableHiding: false,
   },
   {
-    accessorKey: "image_url",
+    accessorKey: "Image",
     header: null,
-    cell: ({ row }) => <div className="lowercase">{row.getValue("image_url")}</div>,
+    cell: () => (
+      <div className="lowercase">
+        <Image
+          width={300}
+          height={300}
+          alt="produk"
+          src={"/product.jpg"}
+          className="h-32 w-32 rounded-xl object-cover"
+        />
+      </div>
+    ),
   },
   {
     accessorKey: "name",
@@ -98,12 +109,9 @@ export const columns = [
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem onClick={() => navigator.clipboard.writeText(payment.id)}>
-              Copy payment ID
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
+            <DropdownMenuItem>View</DropdownMenuItem>
+            <DropdownMenuItem>Edit</DropdownMenuItem>
+            <DropdownMenuItem>Delete</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );
@@ -140,7 +148,7 @@ export function DataTableDemo() {
     <div className="w-full">
       <div className="flex items-center py-4">
         <Input
-          placeholder="Filter emails..."
+          placeholder="Search by name"
           value={table.getColumn("name")?.getFilterValue() ?? ""}
           onChange={(event) => table.getColumn("name")?.setFilterValue(event.target.value)}
           className="max-w-sm"

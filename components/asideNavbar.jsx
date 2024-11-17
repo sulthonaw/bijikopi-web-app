@@ -1,6 +1,7 @@
 import {
   ArchiveBoxArrowDownIcon,
   ChatBubbleBottomCenterTextIcon,
+  QuestionMarkCircleIcon,
   Squares2X2Icon,
   UserCircleIcon,
 } from "@heroicons/react/24/solid";
@@ -53,6 +54,16 @@ export default function AsideNavbar({ active }) {
               >
                 <ChatBubbleBottomCenterTextIcon width={20} height={20} />
                 <p>Messages</p>
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link href={"/admin/manage/faqs"}>
+              <div
+                className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "faqs")}`}
+              >
+                <QuestionMarkCircleIcon width={20} height={20} />
+                <p>FAQs</p>
               </div>
             </Link>
           </li>
