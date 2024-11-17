@@ -15,10 +15,6 @@ export default function NavbarMain({ selected }) {
       name: "About Us",
     },
     {
-      url: "/#news",
-      name: "News",
-    },
-    {
       url: "/#catalog",
       name: "Catalog",
     },

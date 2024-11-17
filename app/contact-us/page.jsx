@@ -17,6 +17,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 
 const FormSchema = z.object({
   bio: z
@@ -55,10 +56,24 @@ export default function Page() {
           <form onSubmit={form.handleSubmit(onSubmit)} className="mx-auto w-1/2 space-y-6">
             <FormField
               control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Title</FormLabel>
+                  <FormControl>
+                    <Input placeholder="shadcn" {...field} />
+                  </FormControl>
+                  <FormDescription>This is your public display name.</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
               name="bio"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Bio</FormLabel>
+                  <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Tell us a little bit about yourself"
@@ -73,9 +88,11 @@ export default function Page() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className={"mr-0"}>
-              Submit
-            </Button>
+            <div className="flex justify-end">
+              <Button type="submit" className={"mr-0"}>
+                Submit
+              </Button>
+            </div>
           </form>
         </Form>
       </section>

@@ -39,11 +39,9 @@ export default function Client() {
 
   return (
     <>
-      <NavbarMain />
-      <section className="container flex min-h-[100vh] items-center justify-center">
+      <section className="flex min-h-[100vh] items-center justify-center bg-black">
         <Card className="w-full max-w-xl rounded-xl border-2 border-slate-100 px-10 py-10 shadow-sm">
-          <Logo className="mx-auto mb-5 w-36" />
-          <h1 className="mb-3 text-center text-2xl font-semibold text-primary">Welcome</h1>
+          <h1 className="mb-3 text-center text-2xl font-semibold text-primary">Hello, Admin 👋</h1>
           <p className="mb-10 text-center text-slate-500">
             Sign in for full access to available features.
           </p>
@@ -67,21 +65,9 @@ export default function Client() {
               <Input id="password" type="password" placeholder="**********" />
             </div>
             <Button className="w-full">Login</Button>
-            <div className="my-5 flex items-center">
-              <hr className="w-full" />
-              <p className="w-full text-center text-sm text-slate-500">
-                Don&#39;t have an account?
-              </p>
-              <hr className="w-full" />
-            </div>
-            <Button className="flex w-full items-center justify-center gap-2" variant="secondary">
-              <p className="text-sm font-semibold">Create a new account</p>
-              <ArrowLongRightIcon width={24} height={24} />
-            </Button>
           </Form>
         </Card>
       </section>
-      <Footer />
     </>
   );
 }

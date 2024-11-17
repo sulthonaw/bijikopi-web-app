@@ -1,6 +1,6 @@
 import {
   ArchiveBoxArrowDownIcon,
-  NewspaperIcon,
+  ChatBubbleBottomCenterTextIcon,
   Squares2X2Icon,
   UserCircleIcon,
 } from "@heroicons/react/24/solid";
@@ -47,12 +47,12 @@ export default function AsideNavbar({ active }) {
             </Link>
           </li>
           <li>
-            <Link href={"/admin/manage/news"}>
+            <Link href={"/admin/manage/messages"}>
               <div
                 className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "news")}`}
               >
-                <NewspaperIcon width={20} height={20} />
-                <p>News</p>
+                <ChatBubbleBottomCenterTextIcon width={20} height={20} />
+                <p>Messages</p>
               </div>
             </Link>
           </li>
@@ -62,7 +62,7 @@ export default function AsideNavbar({ active }) {
                 className={`flex items-center gap-3 rounded-lg px-4 py-3 ${activeNavItem(active, "profile")}`}
               >
                 <UserCircleIcon width={20} height={20} />
-                <p>Profil</p>
+                <p>Profile</p>
               </div>
             </Link>
           </li>
